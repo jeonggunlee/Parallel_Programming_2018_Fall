@@ -1,4 +1,4 @@
-# CUDA 기반의 GPU Programming 교육
+# 병렬 프로그래밍 / 2018년 가을
 
 ## Schedule (스케쥴)
   - **Day 1:**
