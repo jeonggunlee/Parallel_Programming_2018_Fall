@@ -64,6 +64,12 @@
     -	병렬 CUDA 벡터곱 최적화 소개
     - *LAB 12*:
 
+## 평가 방식
+  - 중간고사 25%, 기말고사 25%
+  - 프로젝트 25%, 실습 25%
+  - 과제 copy 시에 해당 과제 0점 처리
+  - 팀별 프로젝트 진행시, 각 참여 학생의 역활에 대한 평가 진행
+
 ## REFERENCES (참조Sites)
   - OpenMP 동영상 강의 (KISTI) - 한국어 !~
      - [1. OpenMP 소개](https://www.youtube.com/watch?v=6rXJneScWFM)
