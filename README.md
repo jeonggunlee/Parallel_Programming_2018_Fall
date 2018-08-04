@@ -65,6 +65,12 @@
     - *LAB 12*:
 
 ## REFERENCES (참조Sites)
+  - OpenMP 동영상 강의 (KISTI) - 한국어 !~
+     - [1. OpenMP 소개](https://www.youtube.com/watch?v=6rXJneScWFM)
+     - [2. OpenMP 지시어](https://www.youtube.com/watch?v=_K8PTVYjDmc)
+     - [3. OpenMP 환경변수](https://www.youtube.com/watch?v=LKrEWu_5dSQ&t=137s)
+     - [4. OpenMP를 이용한 병렬화](https://www.youtube.com/watch?v=xuEo51976d8)
+     - [5. OpenMP 고급 사용법](https://www.youtube.com/watch?v=LP3IuENi17M)
   - CUDA Sample Directory: C:\ProgramData\NVIDIA Corporation\CUDA Samples
   - CUDA 최고의강좌! 강추! Udacity [Intro to Parallel Programming](https://www.youtube.com/watch?v=F620ommtjqk&list=PLAwxTw4SYaPnFKojVQrmyOGFCqHTxfdv2)
   - Udacity [High Performance Computer Architecture](https://www.youtube.com/watch?v=tawb_aeYQ2g&list=PLAwxTw4SYaPmqpjgrmf4-DGlaeV0om4iP&index=1)
