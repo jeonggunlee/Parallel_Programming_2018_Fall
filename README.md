@@ -1,7 +1,7 @@
 # 병렬 프로그래밍 / 2018년 가을
 
 ### 강의 교수
- 이정근 (Jeong-Gun Lee)
+ 이정근 (Jeong-Gun Lee, http://www.onchip.net)
  
 | Email | 전화번호 | 연구실 | 면담시간 |
 | :---: | :---: | ------ | ----- |
