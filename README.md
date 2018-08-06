@@ -20,7 +20,10 @@
 본 강의에 사용되는 강의 자료와 실습 코드 등은 Github를 통해서 전달될 예정이며, https://github.com/jeonggunlee/Parallel_Programming_2018_Fall 를 통해 접근할 수 있다.
 
 ### 강의 교재 교재
- 
+  - 교수자 PPT 자료 및 보조 문서
+  - 특별히 책으로 된 교재는 없습니다. 다만, 필요에 따라 병렬 프로그래밍에 도움이 되는 문서들을 업로드할 계획입니다.
+  - 필요에 따라 **동영상 강의 클립**이 제공될 수 있습니다.
+  
 ## Schedule (스케쥴)
   - **1주:**
     -	병렬프로그래밍소개: 병렬 프로그래밍 개요 / 병렬 컴퓨터 구조
@@ -30,39 +33,41 @@
     - *LAB 1*: OpenMP를 활용한 매트릭스 곱셈 구현 및 평가
   - **3주:**
     -	GPU 병렬 프로그래밍 기초 1
-    - *LAB 2*: 아마존 클라우드를 활용한 GPU 실습 환경 구축
+    - *LAB 2*: Amazon 클라우드를 활용한 GPU 실습 환경 구축 / Google 클라우드에서 GPU 사용법 소개
   - **4주:**
     -	GPU 병렬 프로그래밍 기초 2
-    - *LAB 3*:
+    - *LAB 3*: HelloCUDA !
+       - Grid-Block-Thread 구조 실험
+       - DeviceQuery / Vector Addition 구현
   - **5주:**
     -	GPU 아키텍쳐: SIMD / SIMT
-    - *LAB 4*:
+    - *LAB 4*: BandwidthTest, Unified Memory 사용 실습
   - **6주:**
     -	GPU 병렬 프로그래밍 기초 3
-    - *LAB 5*:
+    - *LAB 5*: Matrix Transpose 구현 (기본)
   - **7주:**
     -	중간 고사
   - **8주:**
     -	GPU 병렬프로그래밍 최적화 1
-    - *LAB 6*:
+    - *LAB 6*: 최적화 실습
   - **9주:**
     -	GPU 병렬프로그래밍 최적화 2
-    - *LAB 7*:
+    - *LAB 7*: 최적화 실습
   - **10주:**
     -	Parallel Transpose 최적화 1
-    - *LAB 8*:
+    - *LAB 8*: Transpose 최적화 실습 1
   - **11주:**
     -	Parallel Transpose 최적화 2
-    - *LAB 9*:
+    - *LAB 9*: Transpose 최적화 실습 2
   - **12주:**
     -	Parallel Reduction 최적화 1
-    - *LAB 10*:
+    - *LAB 10*: Reduction 최적화 실습 1
   - **13주:**
     -	Parallel Reduction 최적화 2
-    - *LAB 11*:
+    - *LAB 11*: Reduction 최적화 실습 2
   - **14주:**
     -	병렬 CUDA 벡터곱 최적화 소개
-    - *LAB 12*:
+    - *LAB 12*: CUDA 벡터곱 최적화 
 
 ## 평가 방식
   - 중간고사 25%, 기말고사 25%
