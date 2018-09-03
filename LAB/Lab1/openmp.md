@@ -37,4 +37,5 @@ void main()
 gcc myomp.c –o myomp -fopenmp
 ```
 
-https://github.com/jeonggunlee/Parallel_Programming_2018_Fall/blob/master/img/openmp.PNG
+![Alt text](https://github.com/jeonggunlee/Parallel_Programming_2018_Fall/blob/master/img/openmp.PNG
+ "Optional title")
