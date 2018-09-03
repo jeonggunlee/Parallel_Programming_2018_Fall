@@ -27,6 +27,9 @@
 ## Schedule (스케쥴)
   - **1주:**
     -	병렬프로그래밍소개: 병렬 프로그래밍 개요 / 병렬 컴퓨터 구조
+    - 동영상 시청
+        - [[T타임] 가상현실부터 인공지능까지…미래기술은 ‘GPU’에 달려있다!](https://www.youtube.com/watch?v=srLim-zAAIs)
+        - [GPU 기술의 세계 - 이용덕 엔비디아 지사장 / YTN 사이언스](https://www.youtube.com/watch?v=34uW5k77AOA)
   - **2주:**
     - 병렬프로그래밍 모델 소개
     -	병렬프로그래밍 = *OpenMP* 간략 소개
