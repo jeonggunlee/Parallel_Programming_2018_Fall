@@ -33,7 +33,7 @@
         - [[T타임] 가상현실부터 인공지능까지…미래기술은 ‘GPU’에 달려있다!](https://www.youtube.com/watch?v=srLim-zAAIs)
         - [GPU 기술의 세계 - 이용덕 엔비디아 지사장 / YTN 사이언스](https://www.youtube.com/watch?v=34uW5k77AOA)
   - **2주:**
-    - 병렬프로그래밍 모델 소개
+    - 병렬프로그래밍 모델 소개 [PPT](https://github.com/jeonggunlee/Parallel_Programming_2018_Fall/blob/master/PPTs/Intro_PC_Under.pdf)
     -	병렬프로그래밍 = *OpenMP* 간략 소개
     - *[LAB 1](https://github.com/jeonggunlee/Parallel_Programming_2018_Fall/blob/master/LAB/Lab1/openmp.md)*: OpenMP를 활용한 매트릭스 곱셈 구현 및 평가
   - **3주:**
