@@ -44,10 +44,12 @@ void main()
 위 코드 역시, N을 증가시켜보면서 성능을 측정해 보세요.
 
 
+위의 코드를 완성 후에 컴파일시, 리눅스를 사용하는 학생이라면 아래와 같이 터미널에서 컴파일 할수 있습니다.
 ```
 gcc myomp.c –o myomp -fopenmp
 ```
 
+윈도우 비주얼 스튜디오를 사용하는 학생이라면 아래와 같이 OpenMP를 지원하도록 프로젝트의 속성을 수정해주서야 합니다.
 ![Alt text](https://github.com/jeonggunlee/Parallel_Programming_2018_Fall/blob/master/img/openmp.PNG
  "Optional title")
  
