@@ -55,7 +55,7 @@
     -	GPU 병렬 프로그래밍 기초 3
     - *LAB 5*: Matrix Transpose 구현 (기본)
   - **7주:**
-    -	중간 고사
+    - 종합 설계 중간 발표
   - **8주:**
     -	GPU 병렬프로그래밍 최적화 1
     - *LAB 6*: 최적화 실습
@@ -63,20 +63,20 @@
     -	GPU 병렬프로그래밍 최적화 2
     - *LAB 7*: 최적화 실습
   - **10주:**
-    -	Parallel Transpose 최적화 1
+    -	Parallel Transpose 최적화 
     - *LAB 8*: Transpose 최적화 실습 1
   - **11주:**
-    -	Parallel Transpose 최적화 2
-    - *LAB 9*: Transpose 최적화 실습 2
+    -	종합 설계 발표 1
+    - *LAB 9*: 종합 설계 과제 진행
   - **12주:**
-    -	Parallel Reduction 최적화 1
-    - *LAB 10*: Reduction 최적화 실습 1
+    -	종합 설계 발표 2
+    - *LAB 10*: 종합 설계 과제 진행
   - **13주:**
-    -	Parallel Reduction 최적화 2
-    - *LAB 11*: Reduction 최적화 실습 2
+    -	종합 설계 발표 3
+    - *LAB 11*: 종합 설계 과제 진행
   - **14주:**
-    -	병렬 CUDA 벡터곱 최적화 소개
-    - *LAB 12*: CUDA 벡터곱 최적화 
+    -	종합 설계 최종 발표회 1
+    - 종합 설계 최종 발표회 2
 
 ## 평가 방식
   - 종합설계 과제 발표 30%
