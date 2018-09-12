@@ -1,5 +1,10 @@
 ## OpenMP를 이용한 간단한 병렬화 예제입니다.
 
+*  *  *
+
+아주 단순한 vector addition을 수행하는 코드입니다.
+Loop iteration (루프 반복)에서 의존성이 없기 때문에 병렬로 수행될 수 있는 Loop입니다.
+
 ```c
 ...
 void main()
@@ -14,7 +19,9 @@ void main()
 }
 ...
 ```
+위 코드의 수행시간을 N을 변화시켜가면서 측정해 볼까요 ?
 
+자, 그럼 위의 코드에 ```#pragma omp parallel for```를 적용해 봅시다.
 
 ```c
 #include “omp.h”
@@ -32,6 +39,10 @@ void main()
 }
 ...
 ```
+성능을 측정해보면 어떻게 나올까요 ?
+
+위 코드 역시, N을 증가시켜보면서 성능을 측정해 보세요.
+
 
 ```
 gcc myomp.c –o myomp -fopenmp
@@ -40,6 +51,7 @@ gcc myomp.c –o myomp -fopenmp
 ![Alt text](https://github.com/jeonggunlee/Parallel_Programming_2018_Fall/blob/master/img/openmp.PNG
  "Optional title")
  
+ *  *  *
 
 아래는 pi를 계산하는 C 프로그램의 일부입니다. 이를 완성하고, 수행시간이 얼마나 걸리는지 확인해 보세요!
  ```c
