@@ -21,7 +21,7 @@
 
 본강의는 기업이 제시하는 기업형 문제를 하나의 프로젝트로 할당 받아 한학기 동안 진행하는 ```종합설계형 교과목```입니다. 할당되는 프로젝트는 병렬 컴퓨팅 기반의 기업과제로써 학생들은 4명이 한팀을 이루어 프로젝트를 진행하게 됩니다. 팀의 최종 결과물(보고서, 개발소스)는 모두 ```Github```를 통하여 공개하며, 오픈소스화 하는 것이 최종 미션입니다.
 
-##[캡스톤 상세 내용](https://github.com/jeonggunlee/Parallel_Programming_2018_Fall/blob/master/Capstone/readme.md)
+## [캡스톤 상세 내용](https://github.com/jeonggunlee/Parallel_Programming_2018_Fall/blob/master/Capstone/readme.md)
 
 *  *  *
 
