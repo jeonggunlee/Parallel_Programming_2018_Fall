@@ -30,3 +30,6 @@
     
 *  *  *
 
+## 참고 자료
+    - [CUDA를 이용한 Matrix Multiplication](https://sites.google.com/site/5kk73gpu2013/examples/example-matrixmul)
+    - [CUDA를 이용한 CNN 설계](https://sites.google.com/site/5kk73gpu2013/assignment/cnn)
