@@ -31,6 +31,6 @@
 *  *  *
 
 ## 참고 자료
-    - [CUDA를 이용한 행열 곱셈](https://sites.google.com/site/5kk73gpu2013/examples/example-matrixmul)
-    - [Tensor Core를 이용한 행렬 연산](https://devblogs.nvidia.com/programming-tensor-cores-cuda-9/)
-    - [CUDA를 이용한 CNN 설계](https://sites.google.com/site/5kk73gpu2013/assignment/cnn)
+   - [CUDA를 이용한 행열 곱셈](https://sites.google.com/site/5kk73gpu2013/examples/example-matrixmul)
+   - [Tensor Core를 이용한 행렬 연산](https://devblogs.nvidia.com/programming-tensor-cores-cuda-9/)
+   - [CUDA를 이용한 CNN 설계](https://sites.google.com/site/5kk73gpu2013/assignment/cnn)
