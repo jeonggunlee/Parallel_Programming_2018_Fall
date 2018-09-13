@@ -50,7 +50,9 @@
        - DeviceQuery / Vector Addition 구현
   - **5주:**
     -	GPU 아키텍쳐: SIMD / SIMT
-    - *LAB 4*: BandwidthTest, Unified Memory 사용 실습
+    - *LAB 4*: 이전 Lab 계속
+       - Grid-Block-Thread 구조 실험
+       - DeviceQuery / Vector Addition 구현
   - **6주:**
     -	GPU 병렬 프로그래밍 기초 3
     - *LAB 5*: Matrix Transpose 구현 (기본)
