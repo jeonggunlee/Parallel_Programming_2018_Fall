@@ -27,6 +27,12 @@
     - 팀 B: 이준범, 양형모, 고동환, 김혜빈
     - 팀 C: 조준형, 한승탁, 김용호, 이호중
     
+
+## Special Force
+
+    - 팀 A: 정다운, 민진우 - CNN Acceleration
+    - 팀 B: 이주상, 조현상 - CNN Acceleration
+    - 팀 C: 왕종성, 민재홍, Mahlet - Tensor Core Based Accleration
     
 *  *  *
 
