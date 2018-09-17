@@ -30,7 +30,7 @@
 
 ## Special Force
 
-    - 팀 A: 정다운, 민진우 - CNN Acceleration
+    - 팀 A: 정다운, 민진우 - Matrix Multiplication Acceleration with CUDA
     - 팀 B: 이주상, 조현상 - CNN Acceleration
     - 팀 C: 왕종성, 민재홍, Mahlet - Tensor Core Based Accleration
     
