@@ -26,8 +26,11 @@
 ## 팀 구성
 
     - 팀 A: 조서연, 김규민, 서종찬, 김태현 <--> Special Force Team A
+        - 병렬곱 연산의 딥러닝 활용 방식 분석 및 CUDA를 이용한 행렬곱 병렬 가속화 성능평가
     - 팀 B: 이준범, 양형모, 고동환, 김혜빈 <--> Special Force Team B
+        - CUDA를 활용한 Convolutional Neural Network (CNN) 성능 향상 기법 분석 및 성능평가
     - 팀 C: 조준형, 한승탁, 김용호, 이호중 <--> Special Force Team C
+        - Tensor Core 기반의 행렬곱 가속화 및 딥러닝 적용 방식 분석
     
 
 ## Special Force (대학원 지원팀)
