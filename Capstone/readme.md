@@ -30,7 +30,7 @@
     - 팀 C: 조준형, 한승탁, 김용호, 이호중
     
 
-## Special Force
+## Special Force (대학원 지원팀)
 
     - 팀 A: 정다운, 민진우 - Matrix Multiplication Acceleration with CUDA
     - 팀 B: 이주상, 조현상 - CNN Acceleration
