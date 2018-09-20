@@ -25,9 +25,9 @@
 *  *  *
 ## 팀 구성
 
-    - 팀 A: 조서연, 김규민, 서종찬, 김태현
-    - 팀 B: 이준범, 양형모, 고동환, 김혜빈
-    - 팀 C: 조준형, 한승탁, 김용호, 이호중
+    - 팀 A: 조서연, 김규민, 서종찬, 김태현 <--> Special Force Team A
+    - 팀 B: 이준범, 양형모, 고동환, 김혜빈 <--> Special Force Team B
+    - 팀 C: 조준형, 한승탁, 김용호, 이호중 <--> Special Force Team C
     
 
 ## Special Force (대학원 지원팀)
