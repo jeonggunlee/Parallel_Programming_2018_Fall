@@ -41,7 +41,7 @@
     -	병렬프로그래밍 = *OpenMP* 간략 소개
     - *[LAB 1](https://github.com/jeonggunlee/Parallel_Programming_2018_Fall/blob/master/LAB/Lab1/openmp.md)*: OpenMP를 활용한 매트릭스 곱셈 구현 및 평가
   - **3주:**
-    -	GPU 병렬 프로그래밍 기초 1
+    -	[GPU 병렬 프로그래밍 기초 1](https://github.com/jeonggunlee/Parallel_Programming_2018_Fall/blob/master/PPTs/01_CUDA_I_2pages.pdf)
     - *LAB 2*: Amazon 클라우드를 활용한 GPU 실습 환경 구축 / Google 클라우드에서 GPU 사용법 소개
   - **4주:**
     -	GPU 병렬 프로그래밍 기초 2
