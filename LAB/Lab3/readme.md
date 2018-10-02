@@ -15,3 +15,5 @@
 
 06_sumArraysOnGPU-small-case.cu	: 수업 시간에 배운 CUDA 기반의 벡터 합 코드입니다.
 ```
+
+위의 코드들에 대해서 다양한 수정을 통해서 block index 및 thread index에 대한 이해를 높이도록 하세요.
