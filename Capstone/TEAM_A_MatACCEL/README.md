@@ -1,4 +1,4 @@
-## ■ Capstone Design(종합설계) 프로젝트 실행 계획서
+## ■ 병렬 프로그래밍 Capstone Design(종합설계) 프로젝트: MatACCEL
 
 ```
 교과목명: 병렬컴퓨팅-종합설계
