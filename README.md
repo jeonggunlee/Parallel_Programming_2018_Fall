@@ -59,10 +59,10 @@
   - **7주:**
     - 종합 설계 중간 발표
   - **8주:**
-    -	GPU 병렬프로그래밍 최적화 1
+    -	[GPU 병렬프로그래밍 최적화 1](https://github.com/jeonggunlee/Parallel_Programming_2018_Fall/blob/master/PPTs/02_CUDA%20II_2pages.pdf)
     - *LAB 6*: 최적화 실습
   - **9주:**
-    -	GPU 병렬프로그래밍 최적화 2
+    -	[GPU 병렬프로그래밍 최적화 2](https://github.com/jeonggunlee/Parallel_Programming_2018_Fall/blob/master/PPTs/02_CUDA%20II_2pages.pdf)
     - *LAB 7*: 최적화 실습
   - **10주:**
     -	[Parallel Transpose 최적화 ](https://github.com/jeonggunlee/Parallel_Programming_2018_Fall/blob/master/PPTs/02_CUDA%20II_2pages.pdf)
