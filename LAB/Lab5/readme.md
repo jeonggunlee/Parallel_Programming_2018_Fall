@@ -1,8 +1,10 @@
 ## README.md
 
-'''
+```
 transpose.cu: 행렬 Transpose 를 수행하는 CUDA code 입니다.
-'''
+```
+
+*  *  *
 
 ```C
 void transposeHost(float *out, float *in, const int nx, const int ny)
