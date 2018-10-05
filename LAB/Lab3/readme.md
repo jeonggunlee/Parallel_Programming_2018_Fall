@@ -17,3 +17,32 @@
 ```
 
 위의 코드들에 대해서 다양한 수정을 통해서 ```block index``` 및 ```thread index```에 대한 이해를 높이도록 하세요.
+
+*  *  *
+
+아래 코드는 kernel 함수를 이용하여 Hello World를 프린트하는 함수입니다.
+
+```C
+#include "./common.h"
+#include <stdio.h>
+
+/*
+ * A simple introduction to programming in CUDA. This program prints "Hello
+ * World from GPU! from 10 CUDA threads running on the GPU.
+ */
+
+__global__ void helloFromGPU()
+{
+    printf("Hello World from GPU!\n");
+}
+
+int main(int argc, char **argv)
+{
+    printf("Hello World from CPU!\n");
+
+    helloFromGPU<<<1, 10>>>();
+    CHECK(cudaDeviceReset());
+    return 0;
+}
+```
+
