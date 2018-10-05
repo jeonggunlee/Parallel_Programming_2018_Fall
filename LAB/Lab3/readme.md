@@ -202,3 +202,77 @@ int main(int argc, char **argv)
     return(0);
 }
 ```
+
+*  *  *
+
+**04_checkThreadIndex.cu**
+
+아래 코드는 1차원 array를 2차원 형식으로 어떻게 처리하는지 보여주는 코드입니다.
+
+첫번째 함수는 CPU에서 동작하는 코드이고 두번째 kernel 함수는 GPU에서 동작하는 코드입니다.
+
+```C
+void printMatrix(int *C, const int nx, const int ny)
+{
+    int *ic = C;
+    printf("\nMatrix: (%d.%d)\n", nx, ny);
+
+    for (int iy = 0; iy < ny; iy++)
+    {
+        for (int ix = 0; ix < nx; ix++)
+        {
+            printf("%3d", ic[ix]);
+
+        }
+
+        ic += nx;
+        printf("\n");
+    }
+
+    printf("\n");
+    return;
+}
+
+__global__ void printThreadIndex(int *A, const int nx, const int ny)
+{
+    int ix = threadIdx.x + blockIdx.x * blockDim.x;
+    int iy = threadIdx.y + blockIdx.y * blockDim.y;
+    unsigned int idx = iy * nx + ix;
+
+    printf("thread_id (%d,%d) block_id (%d,%d) coordinate (%d,%d) global index"
+           " %2d ival %2d\n", threadIdx.x, threadIdx.y, blockIdx.x, blockIdx.y,
+           ix, iy, idx, A[idx]);
+}
+```
+
+GPU에서 동작하는 kernel 함수의 2차원 구조의 thread index 와 block index를 살펴보시기 바랍니다.
+
+>   int ix = threadIdx.x + blockIdx.x * blockDim.x;
+>
+>   int iy = threadIdx.y + blockIdx.y * blockDim.y;
+>
+>   unsigned int idx = iy * nx + ix;
+
+*  *  *
+
+**05_sumArraysOnHost.c**
+
+아래 코드는 CPU에서 수행되는 통상적인 벡터 합 프로그램입니다. 
+
+```C
+void sumArraysOnHost(float *A, float *B, float *C, const int N)
+{
+    for (int idx = 0; idx < N; idx++)
+    {
+        C[idx] = A[idx] + B[idx];
+    }
+
+}
+```
+
+*  *  *
+
+**06_sumArraysOnGPU-small-case.cu**
+
+아래 코드는
+
