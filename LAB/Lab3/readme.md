@@ -22,6 +22,7 @@
 **01_hello.cu**
 
 아래 코드는 kernel 함수를 이용하여 Hello World를 프린트하는 함수입니다.
+
 main 함수에서 helloFromGPU를 call할 때, ```<<<1, 10>>>```로 thread 생성 configuration을 설정하였는데, 이는 10개의 쓰레드를 가진 하나의 block을 생성함을 의미합니다. 따라서 총 10개의 쓰레드가 생성되고 10번의 "Hello World from GPU!"가 프린트 됩니다.
 
 ```C
