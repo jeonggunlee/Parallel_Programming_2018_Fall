@@ -274,5 +274,25 @@ void sumArraysOnHost(float *A, float *B, float *C, const int N)
 
 **06_sumArraysOnGPU-small-case.cu**
 
-아래 코드는
+아래 코드는 두개의 벡터를 더하는 프로그램으로 GPU에서 동작하는 kernel 함수를 포함하고 있습니다.
+
+```C
+void sumArraysOnHost(float *A, float *B, float *C, const int N)
+{
+    for (int idx = 0; idx < N; idx++)
+        C[idx] = A[idx] + B[idx];
+}
+
+__global__ void sumArraysOnGPU(float *A, float *B, float *C, const int N)
+{
+    int i = threadIdx.x;
+
+    if (i < N) C[i] = A[i] + B[i];
+}
+```
+
+thread index를 생성할 때 ```i = threadIdx.x``` 와 같이 thread index만 사용하였습니다. 왜 block index는 사용하지 않은 것일까요 ?
+그 이유를 main 함수 파트에서 찾아보세요!
+
+
 
