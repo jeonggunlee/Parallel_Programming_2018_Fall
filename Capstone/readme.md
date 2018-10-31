@@ -4,7 +4,8 @@
 *  *  *
 
 ### 알림: Capstone 중간보고서 제출 --> [제출 형식](https://github.com/jeonggunlee/Parallel_Programming_2018_Fall/blob/master/Capstone/%EC%A4%91%EA%B0%84%EB%B3%B4%EA%B3%A0%EC%84%9C.hwp) 참조
-   11월 2일 오후 3시까지 !
+
+>   11월 2일 오후 3시까지 !
 
 *  *  *
 
