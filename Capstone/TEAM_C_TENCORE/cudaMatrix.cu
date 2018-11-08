@@ -19,14 +19,16 @@ __global__ void add(int *c , int *d){
     d[tid]+=c[tid];
 }
 
-__global__ void multi(int *a , int *b,int *d){
-    int tid=threadIdx.x;
 
-    for(int j=0; j<k ; j++){
-        for(int l=0;l<k; l++){
-            d[IDX2C(n,tid,j)]+=a[IDX2C(k,tid,l)]*b[IDX2C(n,l,j)];
-        }    
-    } 
+// 쓰레드의 인덱스와 블록 인덱스를 사용하여 
+// 행렬의 곱샘 연산으 병렬화 합니다.
+__global__ void multi(int *a , int *b,int *d){
+    int tid=threadIdx.x; 
+    int bid=blockIdx.x;
+    
+    for(int l=0;l<k; l++){
+        d[IDX2C(n,tid,bid)]+=a[IDX2C(k,tid,l)]*b[IDX2C(n,l,bid)];
+    }     
 }
 
 
@@ -110,8 +112,8 @@ int main(){
     
 
 
-    //행렬의 행의 수 만큼 쓰레드 생성 
-    multi<<<1,m>>>(d_a,d_b,d_d);
+    //열의 수 만큼 블록을 행의 수만큼 쓰레드를 생성한다.
+    multi<<<k,m>>>(d_a,d_b,d_d);
 
     //메모리 가지고 오기
     cudaMemcpy( d,d_d,m*n*sizeof(int),cudaMemcpyDeviceToHost );
