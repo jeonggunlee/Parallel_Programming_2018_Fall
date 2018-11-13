@@ -1,6 +1,7 @@
 # 병렬 프로그래밍 / 2018년 가을 (종합설계)
 
 *  *  *
+# [알림] 보강수업, 다음주 화요일 20일 오후 6시에 1163-3 실습실에서 진행합니다!
 
 ## [질문 올려주세요](https://github.com/jeonggunlee/Parallel_Programming_2018_Fall/blob/master/QnA.md)
 
