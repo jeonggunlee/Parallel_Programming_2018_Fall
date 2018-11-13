@@ -1,6 +1,9 @@
 # 병렬 프로그래밍 / 2018년 가을 (종합설계)
 
 *  *  *
+
+## [질문 올려주세요](https://github.com/jeonggunlee/Parallel_Programming_2018_Fall/blob/master/QnA.md)
+
 ## [알림] 11월 1일(목) 오후 5시까지 과제에 따른 중간 보고서 제출
 *  *  *
 
