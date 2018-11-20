@@ -50,6 +50,14 @@
     
 *  *  *
 
+##  11월 20일
+  지오멕스 소프트 대표이사 "심재민" 대표님의 캡스톤 과제 내용의 중요성 및 실제 사용 사례
+  ![대표 캡스톤 설명회](./ge0a.jpg)
+  ![대표 캡스톤 설명회](./geob.jpg)
+  ![대표 캡스톤 설명회](./geoc.jpg)
+
+*  *  *
+
 ## 참고 자료
    - [CUDA를 이용한 행열 곱셈](https://sites.google.com/site/5kk73gpu2013/examples/example-matrixmul)
    - [Tensor Core를 이용한 행렬 연산](https://devblogs.nvidia.com/programming-tensor-cores-cuda-9/)
