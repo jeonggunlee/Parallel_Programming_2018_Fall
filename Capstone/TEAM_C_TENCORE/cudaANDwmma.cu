@@ -119,7 +119,7 @@ cudaError_t CalcWMMA(half *A, half *B, float *C, float *D)
         return cuda_status;
 }
 
-nt main()
+int main()
 {
         cudaError_t cuda_status;
         cuda_status = cudaSetDevice(0);
