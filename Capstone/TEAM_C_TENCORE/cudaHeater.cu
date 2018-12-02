@@ -48,9 +48,9 @@ using namespace nvcuda;
    half *a_fp16;
    half *b_fp16;
     float *c;
-   float *c_cublas;
+
    float *c_cuda;
-    float *c_host_cublas;
+
    float *c_host_cuda;
 
    
@@ -60,14 +60,10 @@ using namespace nvcuda;
    cudaEvent_t startCUDA;
    cudaEvent_t stopCUDA;
    
-   cudaEvent_t startcublas;
-   cudaEvent_t stopcublas;
    
    cudaErrCheck(cudaEventCreate(&startCUDA));
    cudaErrCheck(cudaEventCreate(&stopCUDA));
    
-   cudaErrCheck(cudaEventCreate(&startcublas));
-   cudaErrCheck(cudaEventCreate(&stopcublas));
    
    
    cublasErrCheck(cublasCreate(&cublasHandle));
@@ -83,10 +79,9 @@ using namespace nvcuda;
    cudaErrCheck(cudaMalloc((void**)&b_fp16, MATRIX_K * MATRIX_N * sizeof(half)));
 
     cudaErrCheck(cudaMalloc((void**)&c, MATRIX_M * MATRIX_N * sizeof(float)));
-   cudaErrCheck(cudaMalloc((void**)&c_cublas, MATRIX_M * MATRIX_N * sizeof(float)));
    cudaErrCheck(cudaMalloc((void**)&c_cuda, MATRIX_M * MATRIX_N * sizeof(float)));
 
-    c_host_cublas = (float*)malloc(MATRIX_M * MATRIX_N * sizeof(float));
+
    c_host_cuda = (float*)malloc(MATRIX_M * MATRIX_N * sizeof(float));
 
     curandErrCheck(curandCreateGenerator(&gen, CURAND_RNG_PSEUDO_DEFAULT));
@@ -102,7 +97,7 @@ using namespace nvcuda;
    
    curandErrCheck(curandDestroyGenerator(gen));
    
-   cudaErrCheck(cudaMemcpy(c_cublas, c, MATRIX_M * MATRIX_N * sizeof(float), cudaMemcpyDeviceToDevice));
+   
    cudaErrCheck(cudaMemcpy(c_cuda, c, MATRIX_M * MATRIX_N * sizeof(float), cudaMemcpyDeviceToDevice));
     float alpha = 2.0f;
    float beta = 2.0f;
@@ -130,7 +125,7 @@ using namespace nvcuda;
 
    cudaErrCheck(cudaMemcpy(c_host_cuda, c_cuda, MATRIX_M * MATRIX_N * sizeof(float), cudaMemcpyDeviceToHost));
    
-   
+ 
    
    //  cublas결과와 wmma결과를 비교하는 코드이다. 
    //  c_host_cuda[i] 에는 cuda 결과가 
@@ -139,20 +134,10 @@ using namespace nvcuda;
    //  단일정밀도를 가진 쿠다 코어로 계산한 결과를 비교하면 반드시 에러가 발생한다. 
     // 0.01% relative tolerance. 1e-5 absolute tolerance.
 
-  
-// 결과 확인을 위하여 파일을 txt파일로 저장한다.
-
- 
-
-
-  
       printf("Results.\n\n");
       float cudaTime;
-      float cublasTime;
       cudaErrCheck(cudaEventSynchronize(stopCUDA));
-      cudaErrCheck(cudaEventSynchronize(stopcublas));
       cudaErrCheck(cudaEventElapsedTime(&cudaTime, startCUDA, stopCUDA));
-      cudaErrCheck(cudaEventElapsedTime(&cublasTime, startcublas, stopcublas));
       
      // TFLOPS 계산 결과 출력
       printf("cuda took %fms\n", cudaTime);
@@ -161,22 +146,19 @@ using namespace nvcuda;
        printf("\nCUBALS WITH CUDA !\n\n");
    
    
-      
+ 
    
    cudaErrCheck(cudaEventDestroy(startCUDA));
    cudaErrCheck(cudaEventDestroy(stopCUDA));
-    cudaErrCheck(cudaEventDestroy(startcublas));             
-   cudaErrCheck(cudaEventDestroy(stopcublas));
+;
    
    cudaErrCheck(cudaFree(a_fp32));
    cudaErrCheck(cudaFree(b_fp32));
    cudaErrCheck(cudaFree(a_fp16));
    cudaErrCheck(cudaFree(b_fp16));
-    cudaErrCheck(cudaFree(c));
-   cudaErrCheck(cudaFree(c_cublas));
+   cudaErrCheck(cudaFree(c));
    cudaErrCheck(cudaFree(c_cuda));
-   
-   free(c_host_cublas);
+
    free(c_host_cuda);
     cudaErrCheck(cudaDeviceReset());
    return 0;
