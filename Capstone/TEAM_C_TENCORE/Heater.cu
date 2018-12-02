@@ -114,7 +114,7 @@ using namespace nvcuda;
    cudaErrCheck(cudaEventRecord(startCUDA));
    // 쿠다 코어로 변경 2번
    // 쿠다 코어 이용시에 CUUBLAS_GEMM_DFALT_TENSOR_OP을 CUBLAS_GEMM_DEFALT 로 변경해준다. 
-   for(i=0;i<10000000;i++){
+   for(i=0;i<1000;i++){
    cublasErrCheck(cublasGemmEx(cublasHandle, CUBLAS_OP_N, CUBLAS_OP_N, 
                 MATRIX_M, MATRIX_N, MATRIX_K, 
                 &alpha,
@@ -135,7 +135,7 @@ using namespace nvcuda;
    cudaErrCheck(cudaEventRecord(startcublas));
    // 쿠다 코어로 변경 2번
    // 쿠다 코어 이용시에 CUUBLAS_GEMM_DFALT_TENSOR_OP을 CUBLAS_GEMM_DFALT 로 변경해준다. 
-   for(j=0;j<10000000;j++){
+   for(j=0;j<1000;j++){
    cublasErrCheck(cublasGemmEx(cublasHandle, CUBLAS_OP_N, CUBLAS_OP_N, 
                 MATRIX_M, MATRIX_N, MATRIX_K, 
                 &alpha,
