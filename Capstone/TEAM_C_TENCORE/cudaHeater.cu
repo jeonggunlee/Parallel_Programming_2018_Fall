@@ -3,10 +3,8 @@
 #include <cublas_v2.h>
 
 
- // 텐서코어와 쿠다 코어의 결과를 저장한다.
-// cublas를 통하여 계산하며 
-// 옵션을 통하여 쿠다와 텐서코어를 선택한다.
- // Define some error checking macros.
+ // cuda 코어를 많은 시간동안 동작 시키기 위한 코드 
+
 #define cudaErrCheck(stat) { cudaErrCheck_((stat), __FILE__, __LINE__); }
 void cudaErrCheck_(cudaError_t stat, const char *file, int line) {
    if (stat != cudaSuccess) {
@@ -20,7 +18,7 @@ void cublasErrCheck_(cublasStatus_t stat, const char *file, int line) {
    }
 }
  #define curandErrCheck(stat) { curandErrCheck_((stat), __FILE__, __LINE__); }
-void curandErrCheck_(curandStatus_t stat, const char *file, int line) {
+void cumacrosrandErrCheck_(curandStatus_t stat, const char *file, int line) {
    if (stat != CURAND_STATUS_SUCCESS) {
       fprintf(stderr, "cuRand Error: %d %s %d\n", stat, file, line);
    }
