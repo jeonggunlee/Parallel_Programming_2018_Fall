@@ -6,6 +6,9 @@
 > 2018-2학기 캡스톤디자인, 종합설계교과목을 수강 후 과제진행을 한 팀은 첨부파일의 결과보고서를 팀별로 1부, 프로그램 만족도는 개인별로 작성하여
 > 12월 14일 오후 3시까지 SW중심대학사업단으로 제출바랍니다.
 
+- [최종 보고서 포맷](./Capstone/%EC%BA%A1%EC%8A%A4%ED%86%A4%EB%94%94%EC%9E%90%EC%9D%B8(%EC%A2%85%ED%95%A9%EC%84%A4%EA%B3%84)_%EC%B5%9C%EC%A2%85%EA%B2%B0%EA%B3%BC%EB%B3%B4%EA%B3%A0%EC%84%9C.hwp)
+
+
 # [알림] 보강수업, 다음주 화요일 20일 오후 6시에 1163-3 실습실에서 진행합니다!
 
 ## [질문 올려주세요](https://github.com/jeonggunlee/Parallel_Programming_2018_Fall/blob/master/QnA.md)
