@@ -35,8 +35,10 @@ t.test(cuda,tensor,paired = TRUE) # p-value 2.2e-16
 head(tensor)
 head(cuda)
 
-differ<-cuda-tensor
+
+differ<-abs( cuda-tensor )
 
 mean(differ)
 sd(differ)
-max(abs(differ))
+max(differ)
+min(differ)
