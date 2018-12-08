@@ -116,8 +116,8 @@ using namespace nvcuda;
    cublasErrCheck(cublasGemmEx(cublasHandle, CUBLAS_OP_N, CUBLAS_OP_N, 
                 MATRIX_M, MATRIX_N, MATRIX_K, 
                 &alpha,
-                a_fp32, CUDA_R_32F, MATRIX_M,
-                b_fp32, CUDA_R_32F, MATRIX_K,
+                a_fp16, CUDA_R_16F, MATRIX_M,
+                b_fp16, CUDA_R_16F, MATRIX_K,
                 &beta, 
                 c_cuda, CUDA_R_32F, MATRIX_M,
                 CUDA_R_32F, CUBLAS_GEMM_DFALT));
@@ -148,16 +148,7 @@ using namespace nvcuda;
    cudaErrCheck(cudaMemcpy(c_host_cublas, c_cublas, MATRIX_M * MATRIX_N * sizeof(float), cudaMemcpyDeviceToHost));
    
    
-   
-   //  cublas결과와 wmma결과를 비교하는 코드이다. 
-   //  c_host_cuda[i] 에는 cuda 결과가 
-   //  c_host_cublas[i] 에는 cublass 결과가 담긴다.
-   //  혼합 정밀도를 가진 TensorCore를 통하여 계산한 결과아
-   //  단일정밀도를 가진 쿠다 코어로 계산한 결과를 비교하면 반드시 에러가 발생한다. 
-    // 0.01% relative tolerance. 1e-5 absolute tolerance.
-
   
-
   
       printf("Results.\n\n");
       float cudaTime;
