@@ -1,5 +1,12 @@
 ## 병렬 컴퓨팅 - 캡스톤
 
+
+*  *  *
+
+### 알림: Capstone 중간보고서 제출 --> [제출 형식](https://github.com/jeonggunlee/Parallel_Programming_2018_Fall/blob/master/Capstone/%EC%A4%91%EA%B0%84%EB%B3%B4%EA%B3%A0%EC%84%9C.hwp) 참조
+
+>   11월 2일 오후 3시까지 !
+
 *  *  *
 
 ## 딥러닝/영상처리 가속화를 위한 병렬 컴퓨티 기술 연구
@@ -43,8 +50,18 @@
     
 *  *  *
 
+##  11월 20일
+  지오멕스 소프트 대표이사 "심재민" 대표님의 캡스톤 과제 내용의 중요성 및 실제 사용 사례
+  
+  ![대표 캡스톤 설명회](./ge0a.jpg)
+  ![대표 캡스톤 설명회](./geob.jpg)
+  ![대표 캡스톤 설명회](./geo3.jpg)
+
+*  *  *
+
 ## 참고 자료
    - [CUDA를 이용한 행열 곱셈](https://sites.google.com/site/5kk73gpu2013/examples/example-matrixmul)
    - [Tensor Core를 이용한 행렬 연산](https://devblogs.nvidia.com/programming-tensor-cores-cuda-9/)
    - [CUDA를 이용한 CNN 설계](https://sites.google.com/site/5kk73gpu2013/assignment/cnn)
    - [OpenMP를 이용한 CNN 설계](https://github.com/m-tavana/CNN_OPENMP)
+   - [알기 쉬운 GPU 그리고 머신러닝](https://steemit.com/gpu/@sigmoid/gpu?fbclid=iwar0bk3twq5xtbeohxinlxeht6cpdlgwkn4fcdlupnlkjkjmtoncvwevl3sq)
