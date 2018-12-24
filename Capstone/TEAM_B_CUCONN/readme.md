@@ -651,10 +651,13 @@ GPU 연산을 활용 하기 위해서는 GPU의 메모리로 연산하고자하�
 그러나 연산이 오버헤드보다 작을 만큼의 작은 데이터면 적합하지 않은 과정이다.
 
 수행시간 표를 비교해 보자.
+
 Pure C (순차적 연산)
+
 ![image](https://user-images.githubusercontent.com/44594102/50391862-afeef600-078c-11e9-8636-10bf40304956.png)
 
  Cuda (병렬 처리)
+ 
 ![image](https://user-images.githubusercontent.com/44594102/50391873-ba10f480-078c-11e9-9048-d47f2a4a6d8b.png)
 
 단순 연산 과정만 비교했을 때, CUDA 코드가 놀라울 정도의 속도 향상을 보여주고 있다. 더 좋은 GPU의 사용과 최적화 과정을 거친다면 더욱더 놀라울 정도의 속도 향상을 볼 수 있을 것으로 예상된다. 
