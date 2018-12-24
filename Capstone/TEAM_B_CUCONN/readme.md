@@ -152,8 +152,8 @@ S 는 스트라이드의 값이며 패딩과 마찬가지로 설명은 위와 �
 
 
 
-위의 공식을 적용 해보자.
-![image](https://user-images.githubusercontent.com/44594102/50391689-36a2d380-078b-11e9-8dfe-6d13f18f551a.png)
+위의 공식을 적용 해보자.<br>
+![image](https://user-images.githubusercontent.com/44594102/50391689-36a2d380-078b-11e9-8dfe-6d13f18f551a.png)<br>
 패딩은 사용 되지 않기 때문에 0이 대입 된다.<br>
 스트라이드는 2로 진행<br>
 필터의 크기는 6 x 6이다.
@@ -161,8 +161,8 @@ S 는 스트라이드의 값이며 패딩과 마찬가지로 설명은 위와 �
 
 
 이렇게 공식에 대입하여 638 X 358이라는 출력 이미지의 크기가 도출 된다.<br>
-하지만 (638 x 358) 이라는 이미지 크기 이외에 
-![image](https://user-images.githubusercontent.com/44594102/50391698-402c3b80-078b-11e9-86eb-6293c66eb7c0.png)
+하지만 (638 x 358) 이라는 이미지 크기 이외에 <br>
+![image](https://user-images.githubusercontent.com/44594102/50391698-402c3b80-078b-11e9-86eb-6293c66eb7c0.png)<br>
 X 6 이 수행됨을 볼 수 있는데 <br>
 이 이유는 연산에 사용되는 필터의 개수가 6개 이기 때문에 출력 이미지 개수도 6개가 되기 때문이다.
 
