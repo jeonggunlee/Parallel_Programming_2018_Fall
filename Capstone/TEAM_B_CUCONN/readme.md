@@ -29,7 +29,7 @@ CUDA를 활용한 Convolutional Neural Network (CNN) 성능 향상 기법 분석
 <br><br><br><br><br>
 
 
-문서 개요	
+<h4>문서 개요	</h4>
 1.   병렬 컴퓨팅에 대한 이해와 CUDA 프로그래밍
 2.   인공 신경망(Neural Network)
 3.   합성곱 신경망(Convolution Neural Network)과 구조
