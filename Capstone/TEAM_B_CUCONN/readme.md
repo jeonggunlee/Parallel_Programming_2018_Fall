@@ -13,22 +13,17 @@
 
 팀 B CUCONN 캡스톤 프로젝트 디렉토리입니다.
 
-병렬 프로그래밍
-
-Final Report
-
+병렬 프로그래밍<br>
+Final Report<br>
 Team_B
 
-20135159 이준범
-
-20125189 양형모
-
-20145101 고동환
-
+20135159 이준범<br>
+20125189 양형모<br>
+20145101 고동환<br>
 20143209 김혜민
 
-<br>
 
+<br><br><br><br><br><br>
 
 연구 목표
 CUDA를 활용한 Convolutional Neural Network (CNN) 성능 향상 기법 분석 및 성능평가
@@ -41,7 +36,7 @@ CUDA를 활용한 Convolutional Neural Network (CNN) 성능 향상 기법 분석
 4.   C 로 구성된 CNN 코드 분석
 5.   C 코드 -> Cuda 코드로 변환 (병렬 처리)
 6.   성능 비교
-
+<br><br><br><br><br><br>
 
 
 - [ 본문] 
