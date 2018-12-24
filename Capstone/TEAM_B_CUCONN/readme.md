@@ -52,9 +52,9 @@ CPU의 순차적인 연산 진행과는 달리 GPU는 상당히 많은 코어를
 2.     2.인공 신경망(Neural Network)이란 무엇인가?
  시냅스의 결합으로 네트워크를 형성한 인공 뉴런( 각각의 노드 )이 학습을 통해서 시냅스의 결합 세기를 변화시켜 (더 적합한 node쪽으로 가중치가 커짐) 문제 해결능력을 가지는 비선형 모델(각각의 가중치가 다름)
 1)Input 과정에서 시스템 외부로부터 입력자료를 받아들여서 시스템으로 전송하면 2)시스템이 입력 값을 넘겨받아서 처리 후 결과를 산출 3)Output 과정에서는 현재 시스템 상태에 기준, 출력 값을 산출한다.( 결과 내는 과정 -> 데이터 분류로 나오는 결과 값)
- <div>
+
 ![1](https://user-images.githubusercontent.com/44594102/50391640-bf6d3f80-078a-11e9-98fd-6e7ff41fe175.JPG)
-</div>
+
 3.     3.합성곱 신경망(Convolution Neural Network, CNN)
 합성곱 신경망은 합성곱+신경망의 합성어로 딥 러닝에서 이미지 인식에 많이 사용되는 기법.
 
@@ -62,12 +62,10 @@ CPU의 순차적인 연산 진행과는 달리 GPU는 상당히 많은 코어를
 	합성곱 층(Convolution Layer)
 합성곱층(Convolutinal Layer)에서 기존의 특징 filter를 적용, subSampling(일반적으로 CNN에서는 Max pooling을 사용)과정을 반복적으로 수행해서 마지막으로 활성 함수를 적용해 특징(Feature)을 뽑아내는 일련의 과정을 거친다. 
  
- <div>
 ![image](https://user-images.githubusercontent.com/44594102/50391645-d9a71d80-078a-11e9-9cf1-3ecab6423d96.png)<br>
 ![image](https://user-images.githubusercontent.com/44594102/50391650-e166c200-078a-11e9-9cfb-9050888db1c8.png)<br>
 ![image](https://user-images.githubusercontent.com/44594102/50391651-e3308580-078a-11e9-8f43-db1378470b4e.png)
-</div>
- 
+
 합성곱 과정에서 전체 입력데이터의 모든 픽셀에 연결하는 것이 아니라 합성곱 뉴런 수용영역안에 있는 픽셀에만 연결하기 때문에 저 수준 특징에 집중할 수 있고 다음 합성곱층으로 넘어갈수록 고수준의 특성 조합으로 나아가게 된다. 또한 3차원 이미지를 그대로 입력 데이터로 받기 때문에 제대로 학습할 가능성이 높다고 할 수 있다.
 
 	특징 데이터 (Feature)
@@ -78,9 +76,9 @@ Convolutional Layer를 거치고 활성 함수 적용을 통해서 추출한 특
 (활성 함수가 적용되면 Convolutinal Layer에서 결과로 나온 Matrix들이 실수 값으로 변경된다. 이 데이터를 가지고 가중치를 주면서 분류하는 과정)
  
 이러한 일련의 과정을 CNN이라고 하며 마지막 신경망 층까지 거치고 나온 데이터들을 통해서 입력 데이터(원본 이미지)의 특징을 추출하는 것이다.
-<div>
+
 ![image](https://user-images.githubusercontent.com/44594102/50391653-e75ca300-078a-11e9-81f4-0f8622e4486c.png)
-</div>
+
 4.     4.C로 구성된 CNN 코드 분석
 C로 구성된 코드 내의 함수 헤더이다.
 각각의 함수에는 함성 곱 연산이 진행이 된다.
