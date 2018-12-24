@@ -207,7 +207,7 @@ For 문에 사용되는 변수를 변경하며 과정을 확인해 보자<br>
  
  
  
- <br><br><br><br>
+ <br><br>
  
  
  
@@ -551,14 +551,14 @@ s_in_layer의 크기가 왜 20*20이 되는 것인지 알았다.<br>
 그렇다면 다음으로 s_in_layer에 값을 채워 넣는 부분을 알 필요가 있다.<br>
 s_in_layer에 값을 채워 넣는 코드 부분은 이렇다.<br>
 
-d_in_layer_base = by * 8 * 2 * 1280 + bx * 8 * 2;
+d_in_layer_base = by * 8 * 2 * 1280 + bx * 8 * 2;<br>
 
-if(tx<5){
-	uchar4_tmp = ((uchar4*)d_in_layer)[ (d_in_layer_base + ty*1280 + tx*4) / 4];
-	s_in_layer[ty*20+tx*4] = uchar4_tmp.x;
-	s_in_layer[ty*20+tx*4+1] = uchar4_tmp.y;
-	s_in_layer[ty*20+tx*4+2] = uchar4_tmp.z;
-	s_in_layer[ty*20+tx*4+3] = uchar4_tmp.w;
+if(tx<5){<br>
+	uchar4_tmp = ((uchar4*)d_in_layer)[ (d_in_layer_base + ty*1280 + tx*4) / 4];<br>
+	s_in_layer[ty*20+tx*4] = uchar4_tmp.x;<br>
+	s_in_layer[ty*20+tx*4+1] = uchar4_tmp.y;<br>
+	s_in_layer[ty*20+tx*4+2] = uchar4_tmp.z;<br>
+	s_in_layer[ty*20+tx*4+3] = uchar4_tmp.w;<br>
 
 	uchar4_tmp = ((uchar4*)d_in_layer)[ (d_in_layer_base + (8+ty)*1280 + tx*4) / 4];
 	s_in_layer[(8+ty)*20+tx*4] = uchar4_tmp.x;
