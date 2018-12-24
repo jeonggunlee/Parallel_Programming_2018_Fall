@@ -79,9 +79,9 @@ Convolutional Layer를 거치고 활성 함수 적용을 통해서 추출한 특
 ![image](https://user-images.githubusercontent.com/44594102/50391653-e75ca300-078a-11e9-81f4-0f8622e4486c.png)
 
 4.     4.C로 구성된 CNN 코드 분석
-C로 구성된 코드 내의 함수 헤더이다.
-각각의 함수에는 함성 곱 연산이 진행이 된다.
-Conv 1 ~ Conv3 에서는 Input_image(찾고자 하는 이미지 원본 OR Conv함수를 통과한
+C로 구성된 코드 내의 함수 헤더이다.<br>
+각각의 함수에는 함성 곱 연산이 진행이 된다.<br>
+Conv 1 ~ Conv3 에서는 Input_image(찾고자 하는 이미지 원본 OR Conv함수를 통과한<br>
 이미지) filter(찾고자 하는 이미지의 특성 값)의 합성 곱이 진행이 된다.
  
 ![image](https://user-images.githubusercontent.com/44594102/50391654-ef1c4780-078a-11e9-8cc0-b0aabcf87ee0.png)
@@ -106,12 +106,12 @@ CNN – Pure C 코드 전체
 ![image](https://user-images.githubusercontent.com/44594102/50391668-1b37c880-078b-11e9-8dc4-5129835f7d08.png)
 
  
-구현되는 main 코드의 모습이다.
-각각의 영역마다 주석으로 내용 설명을 첨부 하였으며 
-실제로 작업(CNN) 진행 되는 
+구현되는 main 코드의 모습이다.<br>
+각각의 영역마다 주석으로 내용 설명을 첨부 하였으며 <br>
+실제로 작업(CNN) 진행 되는 <br>
 convolution layer 1 ~ 4 의 함수에 대해서 자세히 설명 하겠다.
 
-설명 하기에 앞서 main 코드가 구현 되는 과정
+설명 하기에 앞서 main 코드가 구현 되는 과정<br>
 Convolution 함수가 내부의 구조를 도식화한 이미지를 확인해 보자.
 
 Main 구성도
@@ -127,12 +127,12 @@ Using Pure C – Layer1
 ![image](https://user-images.githubusercontent.com/44594102/50391679-2d196b80-078b-11e9-8467-bbab967cf7a0.png)
 
 
-위에서 순서 대로 
-initBias () -> convolution () -> Sigmoid() 과정이 진행 됨을 볼 수 있다.
+위에서 순서 대로 <br>
+initBias () -> convolution () -> Sigmoid() 과정이 진행 됨을 볼 수 있다.<br>
 하나하나 세부적으로 알아보자.
 
 
-InitBias() 
+InitBias() <br>
 기존에 완성된 머신러닝 모델의 편향치를 연산에 사용하기 위하여 초기화 작업
  
 ![image](https://user-images.githubusercontent.com/44594102/50391681-31458900-078b-11e9-8f46-6d570415413c.png)
@@ -143,34 +143,34 @@ Y 의 배열의 크기는 공식에서 도출된 크기이다.
  
 ![image](https://user-images.githubusercontent.com/44594102/50391686-33a7e300-078b-11e9-8fb4-bf5211e39d5b.png)
 
-위의 사진에서 OH | OW 는 출력되는 이미지의 너비와 높이이며
-H | W 는 입력 이미지의 높이와 너비 이다.
-FH | FW 는 필터 이미지의 높이와 너비 이다.
-P 는 패딩의 크기 이며 패딩에 대한 설명은 문서 초반을 참조하길 바란다.
+위의 사진에서 OH | OW 는 출력되는 이미지의 너비와 높이이며<br>
+H | W 는 입력 이미지의 높이와 너비 이다.<br>
+FH | FW 는 필터 이미지의 높이와 너비 이다.<br>
+P 는 패딩의 크기 이며 패딩에 대한 설명은 문서 초반을 참조하길 바란다.<br>
 S 는 스트라이드의 값이며 패딩과 마찬가지로 설명은 위와 같다.
-
+<br><br>
 
 
 
 위의 공식을 적용 해보자.
 ![image](https://user-images.githubusercontent.com/44594102/50391689-36a2d380-078b-11e9-8dfe-6d13f18f551a.png)
-패딩은 사용 되지 않기 때문에 0이 대입 된다.
-스트라이드는 2로 진행
+패딩은 사용 되지 않기 때문에 0이 대입 된다.<br>
+스트라이드는 2로 진행<br>
 필터의 크기는 6 x 6이다.
+<br>
 
 
-
-이렇게 공식에 대입하여 638 X 358이라는 출력 이미지의 크기가 도출 된다.
+이렇게 공식에 대입하여 638 X 358이라는 출력 이미지의 크기가 도출 된다.<br>
 하지만 (638 x 358) 이라는 이미지 크기 이외에 
 ![image](https://user-images.githubusercontent.com/44594102/50391698-402c3b80-078b-11e9-86eb-6293c66eb7c0.png)
-X 6 이 수행됨을 볼 수 있는데 
+X 6 이 수행됨을 볼 수 있는데 <br>
 이 이유는 연산에 사용되는 필터의 개수가 6개 이기 때문에 출력 이미지 개수도 6개가 되기 때문이다.
 
-Convolution()
-실제로 중요한 연산이 진행 되는 과정이다.
-위의 함수는 1280  x 720 (입력 이미지) 와 6 x 6 (필터 이미지) 의 합성 곱으로 진행이 된다.
+Convolution()<br>
+실제로 중요한 연산이 진행 되는 과정이다.<br>
+위의 함수는 1280  x 720 (입력 이미지) 와 6 x 6 (필터 이미지) 의 합성 곱으로 진행이 된다.<br>
 이는 수가 너무 커지기 때문에 구동 과정에서의 직관성이 떨어진다 확인하여
-
+<br>
 위의 과정을 분석 하기 위하여 입력 이미지와 필터 이미지를 축소 시켜 보았다. 
   
 ![image](https://user-images.githubusercontent.com/44594102/50391701-44f0ef80-078b-11e9-9d2c-d7d9c872754e.png)
@@ -187,11 +187,11 @@ Convolution()
 
 
 
-For 문에 사용되는 변수를 변경하며 과정을 확인해 보자
-가장 안의 for문 변수인 k를 수정 했을 때이다.
-여기서 이미지의 weight 은 0123 -> filter 1 | 4567 -> filter2 8,9,10,11 -> filter3이며
-각각의 filter는 2 x 2 로 		0 	1 	으로 구성 된다.
-			                	2	3
+For 문에 사용되는 변수를 변경하며 과정을 확인해 보자<br>
+가장 안의 for문 변수인 k를 수정 했을 때이다.<br>
+여기서 이미지의 weight 은 0123 -> filter 1 | 4567 -> filter2 8,9,10,11 -> filter3이며<br>
+각각의 filter는 2 x 2 로 		0 	1 	으로 구성 된다.<br>
+			            2	    3
  
 ![image](https://user-images.githubusercontent.com/44594102/50391710-4cb09400-078b-11e9-98bc-dc96c44c9395.png)
 ![image](https://user-images.githubusercontent.com/44594102/50391711-4e7a5780-078b-11e9-8158-35048d113800.png)
@@ -212,23 +212,23 @@ For 문에 사용되는 변수를 변경하며 과정을 확인해 보자
  
  
 
-위의 이미지 진행 되로 연산은 수행된다.
-해당 과정으로 연산이 모두 수행된 y[6 x 638 x 358] 의 배열은 이후
-Sigmoid() 비선형 데이터화 과정을 거치게 된다.
+위의 이미지 진행 되로 연산은 수행된다.<br>
+해당 과정으로 연산이 모두 수행된 y[6 x 638 x 358] 의 배열은 이후<br>
+Sigmoid() 비선형 데이터화 과정을 거치게 된다.<br>
 
 Sigmoid()
  
 ![image](https://user-images.githubusercontent.com/44594102/50391724-66ea7200-078b-11e9-8c78-11cff97925b0.png)
 
-해당 부분은 단순하게 배열 안의 모든 값을 함수(sigmoid)를 거친 값(비선형 데이터) 로 변환 하는 작업으로 적중률을 높이는데 사용이 된다.
+해당 부분은 단순하게 배열 안의 모든 값을 함수(sigmoid)를 거친 값(비선형 데이터) 로 변환 하는 작업으로 적중률을 높이는데 사용이 된다.<br>
+<br>
 
+이렇게 convolution1() 함수는 <br>
+InitBias() -> convolution() -> sigmoid() 이 3가지가 기본적으로 수행이 된다.<br>
+본 층은 단순하게 입력 이미지에 필터 이미지를 합성 곱 만을 진행하는 층이기 때문이다.<br>
 
-이렇게 convolution1() 함수는 
-InitBias() -> convolution() -> sigmoid() 이 3가지가 기본적으로 수행이 된다.
-본 층은 단순하게 입력 이미지에 필터 이미지를 합성 곱 만을 진행하는 층이기 때문이다.
-
-하지만 2, 3 층의 경우 모델의 적중률을 높이기 위해 convolution() 단계가 조금 독특하게 진행이 된다. Initbias()와 sigmoid()는 동일한 과정이 수행. 다른 부분인 convolution() 부분만 알아보자.
-
+하지만 2, 3 층의 경우 모델의 적중률을 높이기 위해 convolution() 단계가 조금 독특하게 진행이 된다. Initbias()와 sigmoid()는 동일한 과정이 수행. 다른 부분인 convolution() 부분만 알아보자.<br>
+<br>
 Using Pure C – Layer2
  
  
@@ -236,26 +236,25 @@ Using Pure C – Layer2
 
 ![image](https://user-images.githubusercontent.com/44594102/50391730-7964ab80-078b-11e9-9d87-fb2adb06dee6.png)
 
- 
 ![image](https://user-images.githubusercontent.com/44594102/50391734-841f4080-078b-11e9-8ac5-3fbc2291825d.png)
 
 
 
-Convolution2 의 경우 3개의 연산으로 나뉘어 진다.
+Convolution2 의 경우 3개의 연산으로 나뉘어 진다.<br>
 이유는
  
 ![image](https://user-images.githubusercontent.com/44594102/50391735-86819a80-078b-11e9-9a0c-9f6c941ca47e.png)
 
 여기에 있다.
 
-Convloution1 을 통과한 우리는 현재 6개의 결과 이미지가 존재한다
-이는 0 ~ 5의 인덱스를 가지고 있으며 conv2 에서는 높은 분석률을 위해서 특성 조합을 사용하여 연산에 적용 한다.
+Convloution1 을 통과한 우리는 현재 6개의 결과 이미지가 존재한다<br>
+이는 0 ~ 5의 인덱스를 가지고 있으며 conv2 에서는 높은 분석률을 위해서 특성 조합을 사용하여 연산에 적용 한다.<br>
 
-이 조합은 필터 3개, 4개 6개의 조합을 이용하여 합성 곱을 진행한다.
-조합을 위해서 qq 배열을 선언하여 내부에는 실제 인덱스 값 을 저장 해 놓은 모습이다.
+이 조합은 필터 3개, 4개 6개의 조합을 이용하여 합성 곱을 진행한다.<br>
+조합을 위해서 qq 배열을 선언하여 내부에는 실제 인덱스 값 을 저장 해 놓은 모습이다.<br>
 
-배열 저장 모양은 직관성을 위해 각 층마다 3조합, 4조합 6조합으로 나눈 모습이다.
-조합을 통해서 완성되는 convolution 2 층의 결과 사이즈는 아래와 같은데 
+배열 저장 모양은 직관성을 위해 각 층마다 3조합, 4조합 6조합으로 나눈 모습이다.<br>
+조합을 통해서 완성되는 convolution 2 층의 결과 사이즈는 아래와 같은데 <br>
 이는 1층과 마찬가지로 공식을 통해 도출된 크기이다.
 
 ![image](https://user-images.githubusercontent.com/44594102/50391738-8e413f00-078b-11e9-877a-e66a072d1aa2.png)   ![image](https://user-images.githubusercontent.com/44594102/50391740-8f726c00-078b-11e9-8c71-f34f7011b79b.png)
@@ -263,8 +262,8 @@ Convloution1 을 통과한 우리는 현재 6개의 결과 이미지가 존재�
  
 
 
-사이즈는 공식을 통해 이유를 확인 했다.
-그러나 왜 결과 이미지의 개수는 16개 인가???
+사이즈는 공식을 통해 이유를 확인 했다.<br>
+그러나 왜 결과 이미지의 개수는 16개 인가???<br>
 이는 조합을 통해 완성되는 개수가 16 개 이기 때문이다.
 
 
